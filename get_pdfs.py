@@ -39,8 +39,6 @@ class PdfFinder:
     def get_links(self):
         return '\n'.join(map(str,[x.url for x in list(self.browser._browser.links())]))
 
-
-
     def get_dl_link(self):
         return [x for x in list(self.browser._browser.links()) if 'filepi' in x.url][0]
 
@@ -61,16 +59,16 @@ def main():
         print finder.search(sys.argv[1])
         #for itm in  finder.links.items():
         #    print itm
-    elif len(sys.argv) == 3:
+    elif len(sys.argv) >= 3:
         finder.search(sys.argv[1])
         finder.get_link(finder.links[finder.links.keys()[int(sys.argv[2])]])
     #print map(str.strip,finder.browser.get_title().split('-'))
-        name = finder.make_filename()
+        name = (len(sys.argv) == 4) and sys.argv[-1] or finder.make_filename()
         finder.get_link(finder.get_dl_link())
         finder.save_file(name)
         print 'saved {} to file'.format(name)
     else:
-        print 'Usage: findpdf <TERM> <NUM> - search for TERM and download NUM'
+        print 'Usage: findpdf <TERM> <NUM> [outfile] - search for TERM and download NUM'
     #finder.get_link(finder.get_dl_link())
 if __name__ == "__main__":
     main()
