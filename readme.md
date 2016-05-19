@@ -1,11 +1,11 @@
-# it-book-dl
+# it-ebook-dl
 
 a python tool to download books from it-ebooks.info!!!!
 
 just:
 
 ```bash
-$ python setup.py install
+$ pip install it-ebook-dl
 ```
 
 then to search :
