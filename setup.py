@@ -5,11 +5,11 @@ except ImportError:
 
 config = {
     'name':'it-ebook-dl',
-    'version':'0.0.3',
+    'version':'0.0.4',
     'py_modules':['get_pdfs'],
     'install_requires':[
          'mechanize==0.2.5',
-         'twill==0.9',
+         'twill==0.9.1',
     ],
     'entry_points':{
         'console_scripts':
