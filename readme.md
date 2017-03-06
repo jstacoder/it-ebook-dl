@@ -1,5 +1,6 @@
 # it-ebook-dl
-
+# due to restrictions placed on it-ebooks.info this no longer works for downloads, but that is because they diasabled all 
+# downloads on the site!
 a python tool to download books from it-ebooks.info!!!!
 
 just:
